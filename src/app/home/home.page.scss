@@ -1,1 +1,44 @@
+ion-header {
+    img {
+        width: 10%;
+    }
+}
+
+ion-content {
+    //background: rgb(214,37,109);
+    --background: linear-gradient(90deg, rgba(214,37,109,1) 0%, rgba(76,37,120,1) 100%);
+
+    ion-card {
+        background: snow;
+        ion-card-subtitle {
+            color: rgb(79,38,114);
+            padding: 0px 10px;
+        }
+    }
+
+    ion-list {
+        background: transparent;
+        margin: 10px;
+        ion-item{
+            margin-bottom: 5px;
+        }
+        ion-avatar {
+            width: 70px;
+            height: 70px;
+        }
+        ion-slides {
+            max-height: 150vw;
+        }
+    }
+   
+}
+
+ion-footer {
+    ion-buttons {
+        
+            justify-content: space-between;
+            display: flex;
+        
+    }
+}
 

@@ -1,5 +1,7 @@
 {
   "name": "VenturusIonic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

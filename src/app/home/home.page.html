@@ -1,14 +1,72 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-toolbar>
+        <img src="https://media.glassdoor.com/sql/295837/venturus-centro-de-inova%C3%A7%C3%A3o-tecnol%C3%B3gica-squarelogo-1568727841351.png"/>
+      <ion-title>
+        Venturus Cat List Test
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <div *ngIf="view == 1">
+    <ion-card *ngFor="let cat of catImgList" >
+      <ion-card-header no-padding padding-left>
+        <ion-card-subtitle>
+          <h4>{{cat.title}}</h4>
+        </ion-card-subtitle>
+          
+          
+        </ion-card-header>
+      
+        <ion-card-content no-padding>
+          <img src="{{cat.link}}" />
+        </ion-card-content>
+    </ion-card>
+    </div>
+
+    <div *ngIf="view == 2">
+      <ion-list>
+        <ion-item *ngFor="let cat of catImgList">
+            <ion-avatar>
+              <img src="{{cat.link}}">
+            </ion-avatar>
+          <ion-label>{{cat.title}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="view == 3">
+      <ion-slides pager loop slidesPerView="1.5" spaceBetween="10">
+        <ion-slide *ngFor="let cat of catImgList">
+          <div >
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                    {{cat.title}}
+                </ion-card-title>
+                <ion-card-content>
+                  <img src="{{cat.link}}">
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+      
 </ion-content>
+<ion-footer>
+    <ion-buttons>
+        <ion-button (click)="changeView(1)">
+          <ion-label>Cards</ion-label>
+          
+        </ion-button>
+
+        <ion-button (click)="changeView(2)">
+            <ion-label>List</ion-label>
+        </ion-button>
+        <ion-button (click)="changeView(3)">
+          <ion-label>Slides</ion-label>
+        </ion-button>
+      </ion-buttons>
+</ion-footer>
