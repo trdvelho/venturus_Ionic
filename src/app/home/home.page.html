@@ -1,9 +1,6 @@
 <ion-header>
-    <ion-toolbar>
-        <img src="https://media.glassdoor.com/sql/295837/venturus-centro-de-inova%C3%A7%C3%A3o-tecnol%C3%B3gica-squarelogo-1568727841351.png"/>
-      <ion-title>
-        Venturus Cat List Test
-      </ion-title>
+  <ion-toolbar>
+    <img src="https://media.glassdoor.com/sql/295837/venturus-centro-de-inova%C3%A7%C3%A3o-tecnol%C3%B3gica-squarelogo-1568727841351.png"/>
   </ion-toolbar>
 </ion-header>
 
@@ -56,17 +53,18 @@
       
 </ion-content>
 <ion-footer>
-    <ion-buttons>
-        <ion-button (click)="changeView(1)">
+    <ion-segment (ionChange)="changeView($event)" color="secondary">
+        <ion-segment-button value="1" class="footer-button">
+          <ion-icon name="square-outline"></ion-icon>
           <ion-label>Cards</ion-label>
-          
-        </ion-button>
-
-        <ion-button (click)="changeView(2)">
-            <ion-label>List</ion-label>
-        </ion-button>
-        <ion-button (click)="changeView(3)">
+        </ion-segment-button>
+        <ion-segment-button value="2" class="footer-button">
+            <ion-icon name="list"></ion-icon>
+          <ion-label>List</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="3" class="footer-button">
+          <ion-icon name="albums"></ion-icon>
           <ion-label>Slides</ion-label>
-        </ion-button>
-      </ion-buttons>
+        </ion-segment-button>
+      </ion-segment>
 </ion-footer>

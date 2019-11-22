@@ -1,11 +1,14 @@
 ion-header {
-    img {
-        width: 10%;
+    ion-toolbar {
+        text-align: center;
+        img {
+            width: 10%;
+        }
     }
+    
 }
 
 ion-content {
-    //background: rgb(214,37,109);
     --background: linear-gradient(90deg, rgba(214,37,109,1) 0%, rgba(76,37,120,1) 100%);
 
     ion-card {
@@ -26,19 +29,26 @@ ion-content {
             width: 70px;
             height: 70px;
         }
-        ion-slides {
-            max-height: 150vw;
+        
+    }
+    ion-slides {
+        height: 150vw;
+        ion-card {
+            max-height: 135vw;
+            text-align: center;
+            img {
+                height: auto;
+                max-height: 110vw;
+            }
         }
     }
    
 }
-
-ion-footer {
-    ion-buttons {
-        
-            justify-content: space-between;
-            display: flex;
-        
+ion-segment {
+    height: 50px;
+    .footer-button {
+        font-size: 10px !important;
     }
 }
+
 

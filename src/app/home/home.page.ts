@@ -31,7 +31,9 @@ export class HomePage {
       }
       });
   }
-  private changeView(view: number) {
-    this.view = view;
+  private changeView(view: any) {
+    console.log('view ', view.detail.value);
+    
+    this.view = view.detail.value;
   }
 }
