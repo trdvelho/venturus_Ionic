@@ -7,49 +7,49 @@
 <ion-content>
   <div *ngIf="view == 1">
     <ion-card *ngFor="let cat of catImgList" >
+
       <ion-card-header no-padding padding-left>
         <ion-card-subtitle>
           <h4>{{cat.title}}</h4>
-        </ion-card-subtitle>
-          
-          
-        </ion-card-header>
+        </ion-card-subtitle>  
+      </ion-card-header>
       
-        <ion-card-content no-padding>
-          <img src="{{cat.link}}" />
-        </ion-card-content>
+      <ion-card-content no-padding>
+        <img src="{{cat.link}}" />
+      </ion-card-content>
+
     </ion-card>
-    </div>
+  </div>
 
-    <div *ngIf="view == 2">
-      <ion-list>
-        <ion-item *ngFor="let cat of catImgList">
-            <ion-avatar>
-              <img src="{{cat.link}}">
-            </ion-avatar>
-          <ion-label>{{cat.title}}</ion-label>
-        </ion-item>
-      </ion-list>
-    </div>
+  <div *ngIf="view == 2">
+    <ion-list>
+      <ion-item *ngFor="let cat of catImgList">
+          <ion-avatar>
+            <img src="{{cat.link}}">
+          </ion-avatar>
+        <ion-label>{{cat.title}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 
-    <div *ngIf="view == 3">
-      <ion-slides pager loop slidesPerView="1.5" spaceBetween="10">
-        <ion-slide *ngFor="let cat of catImgList">
-          <div >
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>
-                    {{cat.title}}
-                </ion-card-title>
-                <ion-card-content>
-                  <img src="{{cat.link}}">
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </div>
-        </ion-slide>
-      </ion-slides>
-    </div>
+  <div *ngIf="view == 3">
+    <ion-slides>
+      <ion-slide *ngFor="let cat of catImgList">
+        <div >
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                  {{cat.title}}
+              </ion-card-title>
+              <ion-card-content>
+                <img src="{{cat.link}}">
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
       
 </ion-content>
 <ion-footer>
